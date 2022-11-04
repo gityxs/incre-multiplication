@@ -1,0 +1,312 @@
+<!doctype html>
+<!-- NOTE:
+Eras are h1 (such as Early Versions, Content or something like that).
+Content-based updates are h2.
+Balancing/Decently big bugfixing Updates are h3.
+Small (QoL/very small/bugfixing) updates are h4.
+-->
+<html>
+  <head>
+    <!--Useless.-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174671570-1"></script><script>window.dataLayer=window.dataLayer||[];function g/*gtag*/(){dataLayer.push(arguments)};g('js',new Date()),g('config','UA-174671570-1')</script>
+    <!--The rest is useful.-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+    <!--CSS stuff-->
+    <style>
+      html {
+        touch-action: manipulation;
+        font-family: helvetica, arial, sans-serif;
+      }
+      .intro-txt {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+    <script>
+      var url=location.href,
+          gl=document.getElementById("backToGameButton");
+        function backToGame() {location.href=(url.includes("glitch.me"))?"/":((url.includes("github.io"))?"/IncreMultiplication":"/")}
+    </script>
+  </head>
+  <body>
+    <p class="intro-txt center">
+      Welcome to the IncreMultiplication Change Log!
+    </p>
+    <p class="center">
+      <i>
+        I've compiled a list of key moments and updates of the game's ongoing
+        development - for the sake of doing so - including dates of the
+        specified key moments. Enjoy, and thanks for taking your time away to
+        appreciate this Change Log!
+        <br />
+      </i>
+    </p>
+    <i>
+      <b>Notes:</b>
+      <ul>
+        <li>
+          The headings of more significant updates/moments are larger in text
+          size than less significant updates.
+          <ul>
+            <li>On a related note, major changes in each update are <b>bolded</b>, and minor changes are normal.</li>
+          </ul>
+        </li>
+        <li>
+          The dates specified in this Change Log are formatted as DD/MM/YYYY.
+        </li>
+        <li>
+          Totally not inherited from
+          <a href="https://patcailmemer.github.io/Ordinal-Markup">
+            Ordinal Markup's
+          </a>
+          <a href="https://patcailmemer.github.io/Ordinal-Markup/changelog.html">Change Log</a>.
+        </li>
+        <li>
+          There is an easter egg in every update! It changes every update, even in minor updates.
+        </li>
+        <li>Links have been provided for accessing earlier versions of the game, for nostalgic purposes
+          or the curious or simply the ones on the lookout for easter eggs in all the versions.
+        </li>
+      </ul>
+    </i>
+    <button id="backToGameButton" onclick="backToGame()">
+      Back to Game
+    </button>
+    <button onclick="window.scrollTo(0,document.body.scrollHeight);">
+      View Recent Patch
+    </button>
+    <div id="updates-list">
+      <h1>
+        Early Versions (26/7/2020 -> TbA)
+      </h1>
+      <h4>The Start (26/7/2020)</h4>
+      Created and started the project.
+      <h2>
+        <a href="https://v0-1multiplyingidlegame.glitch.me">v0.1</a> ~ The First
+        Version (29/7/2020)
+      </h2>
+      The first officially released version of the game.
+      <br>
+      <br>
+      <b>Content:</b>
+      <ul>
+        <li><b>Implemented Multipliers.</b></li>
+        <li>
+          Started work on 3 tabs, but only the 1<sup>st</sup> tab has content
+          for now. They are:
+          <ul>
+            <li>Multipliers</li>
+            <li>Settings</li>
+            <li>Statistics</li>
+          </ul>
+        </li>
+        <li>Implemented Notations, but only Scientific Notation is supported.</li>
+        <li>Simple CSS.</li>
+        <li>Added Multiplier Prestiges.</li>
+        <li>
+          Production is based on time since last frame to stabilise progress and
+          to allow for off-tab progression.<br />No Offline Progression yet
+          though.
+        </li>
+        <li>
+          Added and started working on the Change Log on this game, which is
+          what you are on currently.
+        </li>
+        <li>And Useless Functions!</li>
+      </ul>
+      <h2><a href="https://v0-2multiplyingidlegame.glitch.me/">v0.2</a> ~ A Crucial Update (1/8/2020)</h2>
+      An important update that greatly increases playability, but isn't too
+      major content-wise.
+      <br>
+      <br>
+      <b>Content:</b>
+      <ul>
+        <li>
+          <b>Added an Auto-saving feature.</b> Austosaves every second. This also allows for more
+          progressing means like offline-like progression.
+        </li>
+        <li>
+          Balanced the game.
+          <ul>
+            <li>
+              Decreased the Multiplier Prestige costs from<br />
+              <code>[250, 1000, 5e4, 1e7, 1e10, 1e15, 1e20, 1e26, 1e32]</code>
+              to<br />
+              <code>[250, 1000, 5e4, 7.5e6, 1e10, 1.25e14, 1e19, 2e24, 1e30]</code>.
+            </li>
+            <li>
+              Also nerfed the effect from Multiplier Prestiges to Number growth,
+              from
+              <b>((<var>x</var> + 1)<sup>2</sup> + <var>x</var> + 1) / 2</b> to
+              simply <b><var>x</var>+1</b>, where <b><var>x</var></b> represents
+              how many Multiplier Prestiges you have performed.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Optimised the game's code a bit by decreasing lines of code and
+          processes (such as
+          <code>for</code> loops) while maintaining performance.
+        </li>
+        <li>Some CSS tweaks to make things look a lil' better.</li>p
+        <li>
+          Tweaked + sorted out some JS code and changed the
+          <code>game.multipliers</code> format from
+          <code>{amount:[number,number],boost:[number,number]}</code> to
+          <code>[{amount:number,boost:number},{amount:number,boost:number}]</code>
+          , and changed the code that gets the variable accordingly.
+        </li>
+        <li>
+          Removed the effect from some browsers on mobile where when you double
+          click, the screen will zoom in, and the click delay. This gets
+          annoying, so I decided to remove that feature.
+        </li>
+        <ul>
+          <li>Also disabled selecting. This may be a controversial change.</li>
+          <li>Note: On iOS Safari, double tapping to zoom in can still happen.</li>
+        </ul>
+        <li>Added more styling to the Change Log.</li>
+        <li>
+          <b>Also added PC support!</b> I did this by performing as listed in
+          the <b>Bug Fixes</b> section of this Update.
+        </li>
+      </ul>
+      <b>Bug Fixes:</b>
+      <ul>
+        <li>
+          <b>Fixed the "Buy Multiplier" Bug (both on Mobile and PC).</b>
+          <br>This bug originated in v0.1, the first version of this game.  
+          The game was not playable on most PCs, as the "Buy Multiplier"
+              buttons fail to work.
+              On Mobile, the bug is not as major. Only sometimes do "Buy Multiplier" buttons work.
+          <br>I fixed this bug by:
+          <ul>
+            <li>
+              Changing the way the Multipliers section of the 1<sup>st</sup>
+              tab, or "tab1" in the HTML, updates.
+              <br />
+              In this way, no longer would it update every frame, rather only
+              when the player performs a certain action such as buying a
+              Multiplier.
+            </li>
+            <li>
+              Also separating the code that updates the Multiplier values from
+              initially, in order to make this possible.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3>
+        <a href="/">v0.21</a> ~ The Save Transferring Update (4/8/2020)
+      </h3>
+      A medium update that adds more options for saving.
+      <br>
+      <br>
+      <b>Content:</b>
+      <ul>
+        <li><b>Added 2 buttons in the Settings tab</b> - Importing and Exporting.<ul>
+          <li>Made it so that when you click "Import", there will be a custom prompt, because if a normal prompt is executed, the game will pause, losing production.</li>
+          <li>Export - Exports a save in <i>not Base 64</i> (secret!),
+            unlike other incrementals exporting in Base 64 (<code>btoa()</code> function) - which is generic.</li>
+          </ul></li>
+        <li>Also added the option to reset your save. .-.</li>
+        <li>Tweaked the code in the <code>Notations.js</code> file, so that numbers greater than 1 million is to be displayed in scientific notation.</li>
+        <li><small>Tiny</small> CSS changes.</li>
+        <li>Finally, sorted out the code in the Save Handling System.</li>
+      </ul>
+      <b>Bug Fixes:</b>
+      <ul>
+        <li>N/A</li>
+      </ul>
+      <b>Known Bugs:</b>
+      <ul>
+        <li>N/A</li>
+      </ul>
+      <h2><a>v0.3</a> ~ A Prestige Layer (7/9/2020)</h2>
+      The update that adds the first ever Prestige Layer, and improvises many features. Also a rename of the game took place. This update took forever for whatever reason. <s>school</s><br><br>
+      <b>Content:</b>
+      <ul>
+        <li><b>Renamed Multiplying Idle Game to IncreMultiplication, and thus relocated the URL from <a href="/multiplying-idle-game">https://idlesquadron.github.io/multiplying-idle-game/</a>.</b> It sounds more original that way xd.</li>
+        <li><b>Initialised the first Prestige Layer</b>; <i>Products</i>.
+        <ul>
+          <li>This allows for continued game content after a Number of 1.000e50.</li>
+          <li>Added its currency - <i>Factored Points</i>. Once you reach 1.000e50, you can start earning it. The more the Number, the more the FP gain.</li>
+          <li>Spend FP on <b>Factor Upgrades</b>, which boost various sources.</li>
+          <li><b>New QoL feature</b> - Max All Multipliers. Unlocks at Product.</li>
+          </ul></li>
+        <li><b>Overhauled the concept of Multipliers with the Multiplier Milestones feature.</b>
+        <ul>
+          <li>It's a global value that holds 2 values - the <b>boost</b> and <b>rate</b>. The starting values are <b>2</b> and <b>10</b>, respectively.</li>
+          <li>Multiplier Milestones boost a Multiplier by <b>boost</b>x every <b>rate</b> of the respective Multiplier (stacks multiplicatively). It can generally be represented by this formula, <b><var>boost</var><sup> floor(<var>multAmount</var>/<var>rate</var>)</sup></b>. It applies to every Multiplier.</li>
+          <!--<li>For example, with a Multiplier Milestone at 2.2x every 8 of a Multiplier, a Multiplier with an <i>amount</i> of 35 will recieve a ~23.42x (2.2<sup>floor(35/8)</sup> = 2.2<sup>4</sup>) multiplier to their growth.</li>-->
+          <li>Added current Multiplier Milestone boost to a Multiplier to each of the Multipliers, to the right of their <b>Amount</b> counter.</li>
+          </ul></li>
+        <li>Regarding and as a result for the above feature, the (base) Multiplier cost scalings have been buffed. From<br />
+          <b>10<sup>round((<var>m</var> + 1) ÷ 2 + 1) &times floor((<var>m</var> + 1) ÷ 2 + 1)</sup> &times
+    (log<sub>10</sub>((<var>m</var> + 2)<sup>1.3</sup> &times 2) + 1)<sup>1.05<sup><var>a</var><sup>1.01</sup></sup> &times 5 - 5</sup></b>, it is now <br />
+          <b>10<sup>round((<var>m</var> + 1) ÷ 2 + 1) &times floor((<var>m</var> + 1) ÷ 2 + 1)</sup> &times
+      (sqrt(<var>m</var> + 3) + 1)<sup>1.05<sup><var>a</var><sup>1.01</sup></sup> &times 5 - 5</sup></b>, where <var>m</var> represents the number Multiplier and <var>a</var> represents <var>m</var><sup>th</sup> Multiplier amount.</li>
+        <li><b>Added more settings!</b>
+        <ul>
+          <li>5 more notations are now implemented - <i>Engineering</i>, <i>Standard</i>, <i>Logarithmic</i>, <i>Alphabetic</i> and <i>Long Alphabetic</i>, along with its <i>Notation</i> button to cycle through them. <i>Scientific</i> is default.<ul>
+            <li>Along with Notations, any value display will change according to your notation.</li>
+            </ul></li>
+          <li>Along with this is customisation of the Growth notation, either <i>additively</i> or <i>multiplicatively</i>.<ul>
+            <li>If the Notation is set to <i>Logarithmic</i> with Growths at <i>Multiplicative</i>, the growth will determine how much the logarithm (in e5.839, 5.839 is the logarithm) grows per second.</li>
+            </ul></li>
+          <li>You can now manipulate the Tick Interval of the game, meaning the interval at where the game 'updates', or <i>loops</i>.</li>
+          </ul></li>
+        <li>Added simple statistics, with 3 subtabs (the Achievements subtab isn't implemented yet). These are mostly just simple milestones involving totals, including Number and time, such as time since start, last Multiplier Prestige and last Product. There is also a Time Record for Product.<ul>
+          <li>This also results in an addition of notation for time.</li>
+          </ul></li>
+        <li>Made CSS more dynamic, with <code>:hover</code> and more. Also a few tweaks.
+          <ul>
+        <li>The top Number and tabs are now <code>position: sticky</code>, meaning that it will follow your scroll position as soon as you start scrolling down and when it would go off-screen.</li>
+        <li>Made the Multipliers less spaced apart.</li>
+          </ul></li>
+        <li>Made the internal JS code a bit better.
+          <ul>
+            <li>The <code>game</code> variable now stores a lot more information.</li>
+            <li>Also I sorted out the <code>game</code> variable, with time data being in <code>game.time</code> (<code>game.lastTick</code> is now <code>game.time.lastTick</code>).</li>
+            <li>Added more explanations in the code via comments (<code>//</code> or <code>/* */</code>).</li>
+            <li>As a result of the inclusion of the Refresh Rate setting, the way the game is updated is changed. It no longer uses a <code>setInterval()</code>, now it uses a self-invoking looping <code>setTimeout()</code> function. This was done as a looping <code>setTimeout()</code> is a lot more flexible with changing intervals.<ul>
+              <li>I also did this for the Auto-Saving loop.</li>
+              </ul></li>
+            <li>Tried to make the code more readable and accessible.</li>
+            <li>Also made a few more shortcut conventions (in <i>js/Shortcuts.js</i>).</li>
+          </ul>
+        </li>
+        <li>And more Formulas!</li>
+      </ul>
+      <b>Bug Fixes:</b>
+      <ul>
+        <li>Fixed a small rounding error in Scientific notation.
+          <br>This bug originated in v0.1.
+          <ul>
+            <li>Instances of where this happens is a number like 9,999,999,989 getting notated to 10.000e9 where it should be 9.999e9 or 1.000e10.</li>
+          </ul>
+        </li>
+      </ul>
+      <h4 id="newest">
+        <a>v0.301</a> ~ The 1<sup>st</sup> <small>smol</small> Update (9/9/2020)
+      </h4>
+      A very small update which fixes only one bug.
+      <br><br>
+      <b>Content:</b>
+      <ul>
+        <li>N/A</li>
+      </ul>
+      <b>Bug Fixes:</b>
+      <ul>
+        <li>Fixed a bug where FU21 becomes exceedingly more powerful than stated.<ul>
+          This is caused by part of FU21's formula being <code>Date.now() - game.time.since.start</code>, but <code>game.time.since.start</code> is not a timestamp of <code>Date.now()</code>, rather a counter in ms that goes up.
+          </ul></li>
+      </ul>
+      <b><i>More updates coming soon. They will be listed here as soon as possible...</i></b>
+    </div>
+  </body>
+</html>
